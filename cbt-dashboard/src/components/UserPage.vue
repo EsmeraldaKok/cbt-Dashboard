@@ -254,7 +254,7 @@
             width: 350px;
             max-width: 100%;
             display: grid;
-            grid-template-columns: repeat(2, minmax(250px, auto));
+            grid-template-columns: repeat(2, minmax(330px, auto));
             grid-template-rows: auto;
             column-gap: 8px;
             row-gap: 8px;
