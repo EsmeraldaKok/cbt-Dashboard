@@ -248,18 +248,32 @@
 /* MEDIA QUERIES*/
 
     /* MEDIUM SCREENS */
-    @media only screen and (min-width: 600px) {
+    @media only screen and (min-width: 500px) {
         /*main grid wrapper */
         .user_table_wrapper {
-            width: 392px;
+            width: 350px;
             max-width: 100%;
             display: grid;
-            grid-template-columns: repeat(3, minmax(340px, 1fr));
+            grid-template-columns: repeat(2, minmax(250px, auto));
             grid-template-rows: auto;
             column-gap: 8px;
             row-gap: 8px;
         }
     }
+
+    @media only screen and (min-width: 713px) {
+        .user_table_wrapper {
+            width: 400px;
+            max-width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(350px, auto));
+            grid-template-rows: auto;
+            column-gap: 8px;
+            row-gap: 8px;
+        }
+    }
+
+
 
     /* LARGE SCREENS */
     @media only screen and (min-width: 1080px) {

@@ -1,18 +1,18 @@
 <template>
   <div id="app">
-    <!--<UserPage />-->
-    <UserInfo />
+    <UserPage />
+    <!--<UserInfo />-->
   </div>
 </template>
 
 <script>
-//import UserPage from './components/UserPage.vue';
-import UserInfo from './components/UserInfo.vue';
+import UserPage from './components/UserPage.vue';
+//import UserInfo from './components/UserInfo.vue';
 
 export default {
   name: 'App',
-  components: { UserInfo },
-  //components: { UserPage }
+  //components: { UserInfo },
+  components: { UserPage }
 }
 </script>
 
