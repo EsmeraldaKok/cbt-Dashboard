@@ -186,16 +186,15 @@
         display: none;
     }
 
-    /*main grid wrapper */
-    .user_table_wrapper {
-        max-width: 392px;
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: auto;
-        row-gap:4px;
-        column-gap: 8px;
-    }
+/*main grid wrapper */
+.user_table_wrapper {
+    max-width: 392px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    row-gap:4px;
+    column-gap: 8px;
 
     /* card wrapper*/
     .user_table {
@@ -204,41 +203,47 @@
         border: 1px solid #e8e8e8a8;
         border-radius: 15px;
         padding: 5px;
-    }
-    .user_wrapper {
-        padding: 10px;
-    }
-    /*button layout */
-    .user_btn_wrapper {
-        align-self: center;
-    }
-    /*button styling */
-    .column_btn {
-        cursor: pointer;
-        padding: 15px 8px;
-        outline: none;
-        border:none;
-        background-color: transparent;
-    }
 
-    /* card info styling */
-    .column_info:first-of-type {
-        font-size: 12px;   /*making fullname bold */
-        font-weight: 600;
-    }
+        .user_wrapper {
+            padding: 10px;
 
-    .column_info_email {
-        font-style: italic; /*italic email bold */
+            /* card info styling */
+
+            .column_info_heading {
+                font-size: 19px;
+                color: black;
+            }
+
+            .column_info_text {
+                text-align: left;
+                font-size:12px;
+            }
+
+            .column_info:first-of-type {
+                font-size: 12px;   /*making fullname bold */
+                font-weight: 600;
+            }
+
+            .column_info_email {
+                font-style: italic; /*italic email bold */
+            }
+        }
+
+        /*button layout */
+        .user_btn_wrapper {
+            align-self: center;
+
+            /*button styling */
+            .column_btn {
+                cursor: pointer;
+                padding: 15px 8px;
+                outline: none;
+                border:none;
+                background-color: transparent;
+            }
+        }
     }
-    
-    .column_info_heading {
-        font-size: 19px;
-        color: black;
-    }
-    .column_info_text {
-        text-align: left;
-        font-size:12px;
-    }
+}
 
 /* MEDIA QUERIES*/
 
