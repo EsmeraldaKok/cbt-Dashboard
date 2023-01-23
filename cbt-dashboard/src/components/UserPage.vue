@@ -248,7 +248,7 @@
 /* MEDIA QUERIES*/
 
     /* MEDIUM SCREENS */
-    @media only screen and (min-width: 500px) {
+    @media only screen and (min-width: 480px) {
         /*main grid wrapper */
         .user_table_wrapper {
             width: 350px;
