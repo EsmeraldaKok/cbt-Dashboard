@@ -147,7 +147,7 @@ let items = [
             }
 
             .client_heading {
-                font-size: 24px;
+                font-size: 1.5rem;
                 padding-left: 15px;
             }
         }
@@ -163,13 +163,13 @@ let items = [
                 margin-bottom: 20px;
 
                 &_heading {
-                    font-size: 12px;
+                    font-size: 0.75rem;
                     font-weight: 800;
                     color: black;
                     line-height: 15px;
                 }
                 &_text {
-                    font-size: 16px;
+                    font-size: 1rem;
                     font-weight: 300;
                     color: black;
                     line-height: 19px;

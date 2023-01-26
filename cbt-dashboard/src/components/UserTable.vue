@@ -128,7 +128,7 @@
 
         "notes": "some note"},
 
-        {"name": "Harland",
+        {"name": "SCOOBYDOO",
 
         "surname": "Sander",
 
@@ -138,7 +138,7 @@
 
         "notes": "some note"},
 
-        {"name": "Harland",
+        {"name": "ujtyhrtgeRF",
 
         "surname": "Sander",
 
@@ -146,7 +146,7 @@
 
         "date_created": "2022/01/17",
 
-        "notes": "some note"}
+        "notes": "k,hjmhgf"}
 
     ]
 
@@ -207,25 +207,25 @@
 
                 &_client {
                     padding: 5px;
-                    font-size: 19px;
+                    font-size: 1.188rem;
                     font-weight: 700;
                     color: black;
                 }
 
                 &_fullname {
                     padding: 5px 3px;
-                    font-size: 12px;
+                    font-size: 0.75rem;
                     font-weight: 600;
                 }
 
                 &_email {
                     padding: 5px;
-                    font-size: 12px;
+                    font-size: 0.75rem;
                     font-style: italic; /*italic email bold */
                 }
                 &_created {
                     padding: 5px;
-                    font-size: 12px;
+                    font-size: 0.75rem;
                 }
                 .wrapper_btn {
                     align-self: center;
@@ -273,7 +273,7 @@
                 .grid_wrapper_heading,
                 .grid_wrapper_data {
                     display: grid;
-                    grid-template-columns: repeat(6, 1fr);
+                    grid-template-columns: repeat(6, 1fr) ;
                     grid-template-rows: auto;
                     align-items: center;
                 }
@@ -281,30 +281,31 @@
                 /* Heading wrapper */
                 .grid_wrapper_heading {
                     color: black;
-                    font-size: 18px;
+                    font-size: 1.125rem;
                     font-weight: 800;
-                    padding: 3px 6px;
+                    margin: 2px 5px;
                 }
 
                 /* Data Wrapper */
                 .grid_wrapper_data {
                     color: black;
-                    font-size: 16px;
+                    font-size: 1rem;
                     line-height: 19px;
                     font-weight: 300;
-                    margin: 3px 2px;
+                    margin: 2px 5px;
                     border: 1px solid transparent;  
                     
+                    
                     .action {
-                        
+                        display: flex;
                         /* All button styles */
                         .btn_action{
-                            font-size: 12px;
+                            font-size: 0.75rem;
                             font-weight: 500;
                             border-radius: 40px;
-                            padding: 10px 8px;
+                            padding: 10px 12px;
                             border: none;
-                            margin: 2px 3px;
+                            margin-right:5px;
                             text-align: center;
                             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
                         }
@@ -346,7 +347,7 @@
                     border: 1px solid white;
                     border-radius: 8px;
                     background-color: #ffffff9c;
-                    margin: 3px 2px;
+                    margin: 2px 5px;
                 }
             }
         }
