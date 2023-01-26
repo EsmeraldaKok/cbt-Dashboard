@@ -305,7 +305,7 @@
                             border-radius: 40px;
                             padding: 10px 12px;
                             border: none;
-                            margin-right:8px;
+                            margin-right:10px;
                             text-align: center;
                             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
                         }
