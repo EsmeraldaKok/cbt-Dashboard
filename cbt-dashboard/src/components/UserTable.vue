@@ -303,7 +303,7 @@
                             font-size: 0.75rem;
                             font-weight: 500;
                             border-radius: 40px;
-                            padding: 10px 12px;
+                            padding: 6px 8px;
                             border: none;
                             margin-right:10px;
                             text-align: center;
