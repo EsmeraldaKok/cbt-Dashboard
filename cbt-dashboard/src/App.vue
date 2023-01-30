@@ -2,7 +2,7 @@
   <div id="app">
     <!--<UserInfo />-->
     <!--<UserTable />-->
-    <AddProjectFormS1 />
+    <AddProjectFormS2 />
     <!--<AddUser />-->
   </div>
 </template>
@@ -12,11 +12,11 @@
 //import UserInfo from './components/UserInfo.vue';
 //import UserTable from './components/UserTable.vue';
 //import AddUser from './components/AddUser.vue';
-import AddProjectFormS1 from './components/AddProjectFormS1.vue';
+import AddProjectFormS2 from './components/AddProjectFormS2.vue';
 
 export default {
     name: "App",
-    components: { AddProjectFormS1 }
+    components: { AddProjectFormS2 }
 }
 </script>
 <style>
