@@ -6,11 +6,17 @@
         </div>
 
         <!--dropdown-->
-        <select name="clients" id="client" class="input_wrapper dropdown">
-            <option value="select">Choose Client</option>
-            <option value="option 1">Option 1</option>
-            <option value="option 2">Option 2</option>
-        </select>  
+        <div class="client_select">
+            <div class="selected-value" @click="showOptions = !showOptions">
+                {{ selected }}
+            </div>
+            <div class="options" v-show="showOptions">
+            <div class="option" v-for="(option, index) in options" :key="index" 
+                @click="selectOption(option)">
+                {{ option }}
+            </div>
+            </div>
+        </div>
 	
         <!--heading two-->
         <div class="form_section_one_headingTwo">
@@ -35,6 +41,19 @@
 <script>
     export default {
         name: "AddProjectFormS1",
+        data() {
+            return {
+            options: ['Option 1', 'Option 2', 'Option 3'],
+            selected: 'Choose client', //heading for dropdown
+            showOptions: false
+            }
+        },
+        methods: {
+            selectOption(option) {
+            this.selected = option;
+            this.showOptions = false;
+            }
+        }
 	}
     
 </script>
@@ -62,7 +81,7 @@
         align-items: left;
         background-color: #80808019;
         border-radius: 15px;
-        padding: 20px;
+        padding: 20px 30px;
 
         //heading styles
         &_heading {
@@ -98,41 +117,55 @@
             color: black;
             padding: 8px;
             margin-bottom: 10px;
-
-            option {
-                background: #FFFFFF00 0% 0% no-repeat padding-box;
-                box-shadow: 0px 3px 6px #00000029;                border-radius: 5px;
-                opacity: 1;
-                backdrop-filter: blur(30px);
-                -webkit-backdrop-filter: blur(30px);
-
-                &:hover {
-                    color: white;
-                    box-shadow: 0 0 10px 100px green inset;
-                }
-            }
-
         }
-        .dropdown {
 
-            outline: 0;
-            background: white;
+        //dropdown
+
+        .client_select {
+            position: relative;
+            max-width: 266px;
+            width: 100%;
+            height: 34px;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            
+        .selected-value {
+            padding: 5px 5px;
+            text-align: left; 
+            cursor: pointer;
+            font-size: 1rem;
             color: black;
-            font-weight:700 ;
-            font-size: 16px;
-            option {
-                background: #FFFFFF00 0% 0% no-repeat padding-box;
-                box-shadow: 0px 3px 6px #00000029;                
-                border-radius: 5px;
-                opacity: 1;
-                backdrop-filter: blur(30px);
-                -webkit-backdrop-filter: blur(30px);
+            font-weight: 700;
+        }
 
-                &:hover {
-                    color: white;
-                    box-shadow: 0 0 10px 100px green inset;
+            .options {
+                position: absolute;
+                top: calc(100% + 3px);
+                left: 0;
+                width: 100%;
+                max-height: 200px;
+                overflow-y: scroll;
+                background: linear-gradient(284deg, rgba(255, 255, 255, 0.986) 45%, rgba(223, 223, 223, 0.986) 92%);
+                border-radius: 5px;
+                overflow-y: hidden;
+
+                .option {
+                    color: black;
+                    padding: 5px;
+                    font-size: 1rem;
+                    font-weight: 300;
+                    cursor: pointer;
+                    
+
+                    &:hover {
+                        background-color: #00CC99;
+                        color: white;
+                    }
                 }
             }
         }
     }
+
 </style>

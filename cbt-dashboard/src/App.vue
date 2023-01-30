@@ -2,8 +2,8 @@
   <div id="app">
     <!--<UserInfo />-->
     <!--<UserTable />-->
-    <!--<AddProjectFormS1 />-->
-    <AddUser />
+    <AddProjectFormS1 />
+    <!--<AddUser />-->
   </div>
 </template>
 
@@ -11,13 +11,12 @@
 
 //import UserInfo from './components/UserInfo.vue';
 //import UserTable from './components/UserTable.vue';
-import AddUser from './components/AddUser.vue';
-
-//import AddProjectFormS1 from './components/AddProjectFormS1.vue';
+//import AddUser from './components/AddUser.vue';
+import AddProjectFormS1 from './components/AddProjectFormS1.vue';
 
 export default {
     name: "App",
-    components: { AddUser }
+    components: { AddProjectFormS1 }
 }
 </script>
 <style>
