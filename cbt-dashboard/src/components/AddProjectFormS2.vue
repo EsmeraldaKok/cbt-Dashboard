@@ -109,35 +109,36 @@
                     opacity: 0;
 
                     & + label {
-                    position: relative;
-                    cursor: pointer;
-                    padding-left: 25px;
+                        position: relative;
+                        cursor: pointer;
+                        padding-left: 25px;
                     }
 
                     & + label:before {
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    width: 15px;
-                    height: 15px;
-                    border: 1px solid black;
-                    border-radius: 100%;
-                    background: white;
-                    &:checked {
-                        border: 1px solid rgb(20, 201, 214);
-                    }
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 15px;
+                        height: 15px;
+                        border: 1px solid black;
+                        border-radius: 100%;
+                        background: white;
+
+                        &:checked {
+                            border: 1px solid rgb(20, 201, 214);
+                        }
                     }
 
                     &:checked + label:after {
-                    content: "";
-                    position: absolute;
-                    left: 3.8px;
-                    top: 3.8px;
-                    width: 8px;
-                    height: 8px;
-                    border-radius: 100%;
-                    background: rgb(20, 201, 214);
+                        content: "";
+                        position: absolute;
+                        left: 3.8px;
+                        top: 3.8px;
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 100%;
+                        background: rgb(20, 201, 214);
                     }
                 }
             }

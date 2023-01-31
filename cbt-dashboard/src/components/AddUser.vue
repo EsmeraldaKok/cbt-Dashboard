@@ -1,6 +1,6 @@
 <template> 
     <form class="user_wrapper">
-        
+    <div class="required">
         <div class="user_select">
             <div class="selected-value" @click="showOptions = !showOptions">
                 {{ selected }}
@@ -12,25 +12,40 @@
             </div>
             </div>
         </div>
-
+        <span class="dot"></span>
+    </div>
          <!--Heading -->
         <div class="user_heading">User details</div>
 
         <label for="Fullname" class="user_label">Full name</label>
-        <input type="Text" id="Fullname" required class="user_input" />
-    
-        <label for="username" class="user_label">Username</label>
-        <input id="username" required type="text" class="user_input" />
-    
-        <label for="email" class="user_label">Email address</label>
-        <input id="email" required type="email" class="user_input" />
-    
-        <label for="password" class="user_label">Password</label>
-        <input type="password" required class="user_input" />
-    
-        <label for="password" class="user_label">Confirm password</label>
-        <input type="password" required class="user_input" />
+        <div class="required">
+            <input type="Text" id="Fullname" required class="user_input" />
+            <span class="dot"></span>
+        </div>
 
+        <label for="username" class="user_label">Username</label>
+        <div class="required">
+            <input id="username" required type="text" class="user_input required" />
+            <span class="dot"></span>
+        </div>
+
+        <label for="email" class="user_label">Email address</label>
+        <div class="required">
+            <input id="email" required type="email" class="user_input required" />
+            <span class="dot"></span>
+        </div>
+
+        <label for="password" class="user_label">Password</label>
+        <div class="required">
+            <input type="password" required class="user_input required" />
+            <span class="dot"></span>
+        </div>
+
+        <label for="password" class="user_label">Confirm password</label>
+        <div class="required">
+            <input type="password" required class="user_input required" />
+            <span class="dot"></span>
+        </div>
         <button type="submit" class="user_submit_btn">Submit</button>
     </form>
 </template>
@@ -82,19 +97,37 @@
         padding: 30px 40px;
         justify-content: center;
 
-        //Input styles
-        .user_input {
-            max-width: 266px;
+        //Input styles     
+        .required {
+            max-width: 280px;
             width:100%;
-            height: 34px;
-            border: 1px solid #000000;
-            border-radius: 5px;
-            margin-bottom:15px;
-            padding: 10px;
-            color: black;
-            font-size: 1rem;
-            font-weight: 300;
-        }
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            padding: 2px;
+            
+            .user_input {
+                max-width: 266px;
+                width:100%;
+                height: 34px;
+                border: 1px solid #000000;
+                border-radius: 5px;
+                margin-bottom:15px;
+                color: black;
+                font-size: 1rem;
+                font-weight: 300;
+                padding-left: 10px;
+                
+            }
+            .dot {
+                height: 4px;
+                width: 4px;
+                background-color: red;
+                border-radius: 100%;
+                margin-left: 3px;
+            }
+
+    }
 
         //input label styles
         .user_label {
@@ -115,6 +148,11 @@
             font-size: 1rem;
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
             margin-top: 25px;
+
+            &:hover {
+                background-color: black;
+
+            }
         }
 
         //heading styling
@@ -124,7 +162,7 @@
             font-weight: 700;
             margin-bottom: 20px;
         }
-
+        
         .user_select {
             position: relative;
             max-width: 266px;
