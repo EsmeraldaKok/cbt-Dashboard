@@ -10,10 +10,9 @@
 <script>
 
 //import UserInfo from './components/UserInfo.vue';
-//import UserTable from './components/UserTable.vue';
-import AddUser from './components/AddUser.vue';
+//import UserTable from './components/UserTable.vue';import AddUser from './components/AddUser.vue';
 //import AddProjectFormS2 from './components/AddProjectFormS2.vue';
-
+import AddUser from './components/AddUser.vue';
 export default {
     name: "App",
     components: { AddUser }

@@ -112,6 +112,7 @@
                         position: relative;
                         cursor: pointer;
                         padding-left: 25px;
+                        font-size: 1rem;
                     }
 
                     & + label:before {

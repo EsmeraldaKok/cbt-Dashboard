@@ -118,7 +118,7 @@
             padding: 8px;
             margin-bottom: 10px;
         }
-
+    }
         //dropdown
 
         .client_select {

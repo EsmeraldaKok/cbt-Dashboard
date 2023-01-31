@@ -99,7 +99,7 @@
 
         //Input styles     
         .required {
-            max-width: 280px;
+            max-width: 285px;
             width:100%;
             display: flex;
             flex-wrap: nowrap;
@@ -120,8 +120,8 @@
                 
             }
             .dot {
-                height: 4px;
-                width: 4px;
+                height: 6px;
+                width: 6px;
                 background-color: red;
                 border-radius: 100%;
                 margin-left: 3px;
