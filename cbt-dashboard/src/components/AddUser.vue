@@ -3,7 +3,7 @@
     <div class="required">
         <div class="user_select">
             <div class="selected-value" @click="showOptions = !showOptions">
-                {{ selected }}
+                {{ selected }}         <span class>▼</span>
             </div>
             <div class="options" v-show="showOptions">
             <div class="option" v-for="(option, index) in options" :key="index" 
@@ -174,12 +174,15 @@
             margin-bottom: 15px;
             
         .selected-value {
+            display: flex;
+            justify-content: space-between;
             padding: 5px 5px;
             text-align: left; 
             cursor: pointer;
             font-size: 1rem;
             color: black;
             font-weight: 700;
+
         }
 
             .options {
