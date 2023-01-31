@@ -1,9 +1,10 @@
 <template>
   <div id="app">
-    <!--<UserInfo />-->
-    <!--<UserTable />-->
-    <!--<AddProjectFormS2 />-->
-    <AddUser />
+    <!--<UserInfo />
+    <UserTable />
+    <AddUser />-->
+    <AddProject />
+    
   </div>
 </template>
 
@@ -11,11 +12,11 @@
 
 //import UserInfo from './components/UserInfo.vue';
 //import UserTable from './components/UserTable.vue';import AddUser from './components/AddUser.vue';
-//import AddProjectFormS2 from './components/AddProjectFormS2.vue';
-import AddUser from './components/AddUser.vue';
+import AddProject from './components/AddProject.vue';
+//import AddUser from './components/AddUser.vue';
 export default {
     name: "App",
-    components: { AddUser }
+    components: { AddProject }
 }
 </script>
 <style>
