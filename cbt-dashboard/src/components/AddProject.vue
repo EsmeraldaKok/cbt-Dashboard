@@ -158,9 +158,25 @@
                     </div>
                 </div>
 
-
             <!-----INPUTS----->
-            
+                <!--input label-->
+                <label for="startDate" class="user_label heading">
+                    Start date
+                </label>
+                <div class="required">
+                    <input type="date" id="startDate" required class="user_input" placeholder="Pick a date"/>
+                    <span class="dot"></span>
+                </div>
+
+                <!--input label-->
+                <label for="dueDate" class="user_label heading">
+                    Due date
+                </label>
+                <div class="required">
+                    <input type="date" id="dueDate" required class="user_input" placeholder="Pick a date"/>
+                    <span class="dot"></span>
+                </div>
+
                 <!--input label-->
                 <label for="conflictParties" class="user_label heading">
                     Conflict parties
@@ -279,7 +295,9 @@
 
 <script>
 
+
     export default {
+        
         name: "AddProject",
         data() {
             return {
@@ -288,6 +306,7 @@
                 showOptions: false,
                 showElement: 1,
                 showButton: 2
+                
             }
         },
         methods: {
@@ -305,13 +324,16 @@
                 }
             }
         }
-    }   
+       // computed: {
+            
+        //} 
+    }  
 </script>
 
 
 <style lang="scss" scoped>
 
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,500;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,500;1,900&display=swap');
     
     /*GENERAL STYLES*/
     *, 
