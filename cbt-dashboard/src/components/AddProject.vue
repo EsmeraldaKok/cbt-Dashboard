@@ -1,8 +1,304 @@
 <template>
     <div class="form_wrapper">
 
-    <!--section_1-->
-        <div class="section" v-if="showElement === 1">
+        <!----Mobile---->
+
+        <div v-if="isMobileView">
+        <!--section_1-->
+            <div class="section" v-if="showElement === 1">
+
+                <!--Heading-->
+                <div class="form_heading">
+                    Section 1
+                </div>
+
+                <!--Dropdown list-->
+                <div class="required">
+                    <div class="user_select">
+                        <div class="selected-value" @click="showOptions = !showOptions">
+                            {{ selected }}         <span class="down-arrow">▼</span>
+                        </div>
+                        <div class="options" v-show="showOptions">
+                            <div class="option" v-for="(option, index) in options" :key="index" 
+                                @click="selectOption(option)">
+                                {{ option }}
+                            </div>
+                        </div>
+                    </div>
+                    <span class="dot"></span>    
+                </div>
+
+                <!--heading two-->
+                <div class="form_subheading">
+                    Project details
+                </div>
+
+                <!-----INPUTS----->
+                    <!--input label-->
+                    <label for="projectTitle" class="user_label heading">
+                        Project title
+                    </label>
+                    <!--input-->
+                    <div class="required">
+                        <input type="Text" id="projectTitle" required class="user_input"/>
+                        <span class="dot"></span>
+                    </div>
+
+                    <!--input label-->
+                    <label for="Notes" class="user_label heading">
+                        Notes
+                    </label>
+                    <!--input-->
+                    <div class="required">
+                        <input type="Text" id="Notes" required class="user_input" />
+                        <span class="dot"></span>
+                    </div>
+
+                    <!--input label-->
+                    <label for="CMID" class="user_label">
+                        CMID
+                    </label>
+                    <!--input-->
+                    <div class="required">
+                        <input type="Text" id="CMID" required class="user_input" />
+                        <span class="dot"></span>
+                    </div>
+
+                    <!--input label-->
+                    <label for="Projectdocumentvolume" class="user_label heading">
+                        Project document volume
+                    </label>
+                    <!--input-->
+                    <div class="required">
+                        <input type="Text" id="Projectdocumentvolume" required class="user_input" />
+                        <span class="dot"></span>
+                    </div>
+
+                    <!--input label-->
+                    <label for="ProjecteDataCMID" class="user_label heading">
+                        Project eData CMID
+                    </label>
+                    <!--input-->
+                    <div class="required">
+                        <input type="Text" id="ProjecteDataCMID" required class="user_input" />
+                        <span class="dot"></span>
+                    </div>
+            </div>
+
+        <!--right btn-->
+            <button class="form_next_btn" v-if="showButton === 1" @click="toggleShowElement">                    
+                Next
+            </button>
+        
+        <!--section_2-->
+            <div class="section" v-if="showElement === 2">
+
+                <!--Heading-->
+                <div class="form_heading">
+                    Section 2
+                </div>
+
+                <!--heading two-->
+                <div class="form_subheading">
+                    Project data
+                </div>
+
+                <!-----RADIOS----->
+
+                    <!--radio group 1-->
+                    <div class="radio_wrapper">
+                        <div class="required">
+                            <div class="user_label">Database Platform</div>
+                            <span class="dot"></span>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" required id="relativity" value="Relativity" class="radio_input"/>
+                            <label for="Relativity" class="radio_label">Relativity</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" required id="Disco" value="Disco" class="radio_input"/>
+                            <label for="Disco" class="radio_label">Disco</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" required id="Accelerate" value="Accelerate" class="radio_input"/>
+                            <label for="Accelerate" class="radio_label">Accelerate</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" required id="Other" value="Other" class="radio_input"/>
+                            <label for="Other" class="radio_label">Other</label>
+                        </div>
+                    </div>
+
+                    <!--radio group 2-->
+                    <div class="radio_wrapper">
+                        <div class="required">
+                            <div class="user_label">Scope</div>
+                            <span class="dot"></span>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" required id="Standardreview" value="Standardreview" class="radio_input"/>
+                            <label for="Standardreview" class="radio_label">Standard review</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" required id="Other" value="Other" class="radio_input"/>
+                            <label for="Other" class="radio_label">Other</label>
+                        </div>
+                    </div>
+
+                    <!--radio group 3-->
+                    <div class="radio_wrapper">
+                        <div class="required">
+                            <div class="user_label">Has foreign language?</div>
+                            <span class="dot"></span>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" required id="No" value="No" class="radio_input"/>
+                            <label for="No" class="radio_label">No</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" required id="Yes" value="Yes" class="radio_input"/>
+                            <label for="Yes" class="radio_label">Yes</label>
+                        </div>
+                    </div>
+
+                <!-----INPUTS----->
+                    <!--input label-->
+                    <label for="startDate" class="user_label heading">
+                        Start date
+                    </label>
+                    <div class="required">
+                        <input type="date" id="startDate" required class="user_input" placeholder="Pick a date"/>
+                        <span class="dot"></span>
+                    </div>
+
+                    <!--input label-->
+                    <label for="dueDate" class="user_label heading">
+                        Due date
+                    </label>
+                    <div class="required">
+                        <input type="date" id="dueDate" required class="user_input" placeholder="Pick a date"/>
+                        <span class="dot"></span>
+                    </div>
+
+                    <!--input label-->
+                    <label for="conflictParties" class="user_label heading">
+                        Conflict parties
+                    </label>
+                    <div class="required">
+                        <input type="Text" id="conflictParties" required class="user_input" />
+                        <span class="dot"></span>
+                    </div>
+                    
+                    <!--input label-->
+                    <label for="keyContacts" class="user_label heading">
+                        Key contacts
+                    </label>
+                    <div class="required">
+                        <input type="Text" id="keyContacts" required class="user_input" />
+                        <span class="dot"></span>
+                    </div>
+            </div>
+
+        <!--right btn-->
+            <button class="form_next_btn" v-if="showButton === 2" @click="toggleShowElement">                    
+                Next
+            </button>
+
+        <!--section_3-->
+            <div class="section" v-if="showElement === 3">
+            
+                <!--Heading-->
+                <div class="form_heading">
+                    Section 3
+                </div>
+
+                <!--heading two-->
+                <div class="form_subheading">
+                    Final details
+                </div>
+
+                <!-----INPUTS----->
+                    <!--input label-->
+                    <label for="volumeOfPages" class="user_label">
+                        Volume of pages
+                    </label>
+                    <div class="required">
+                        <input type="Text" id="volumeOfPages" required class="user_input" />
+                        <span class="dot"></span>
+                    </div>
+
+                    <!--input label-->
+                    <label for="teamSpeed" class="user_label">
+                        Team speed
+                    </label>
+                    <div class="required">
+                        <input type="Text" id="teamSpeed" required class="user_input" />
+                        <span class="dot"></span>
+                    </div>
+
+                    <!--input label-->
+                    <label for="tradeMarkSubject" class="user_label heading">
+                        Trade mark subject
+                    </label>
+                    <div class="required">
+                        <input type="Text" id="tradeMarkSubject" required class="user_input" />
+                        <span class="dot"></span>
+                    </div>
+
+                    <!--input label-->
+                    <label for="office" class="user_label">
+                        Office
+                    </label>
+                    <div class="required">
+                        <input type="Text" id="office" required class="user_input" />
+                        <span class="dot"></span>
+                    </div>
+
+                    <!--input label-->
+                    <label for="softwarePlatform" class="user_label">
+                        Software platform
+                    </label>
+                    <div class="required">
+                        <input type="Text" id="softwarePlatform" required class="user_input" />
+                        <span class="dot"></span>
+                    </div>
+
+                    <!--input label-->
+                    <label for="areaOfLaw" class="user_label heading">
+                        Area of law
+                    </label>
+                    <div class="required">
+                        <input type="Text" id="areaOfLaw" required class="user_input" />
+                        <span class="dot"></span>
+                    </div>
+
+                    <!--input label-->
+                    <label for="clientSelector" class="user_label">
+                        Client selector
+                    </label>
+                    <div class="required">
+                        <input type="Text" id="clientSelector" required class="user_input" />
+                        <span class="dot"></span>
+                    </div>
+
+                    <!--input label-->
+                    <label for="natureOfProceedings" class="user_label heading">
+                        Nature of proceedings
+                    </label>
+                    <div class="required">
+                        <input type="Text" id="natureOfProceedings" required class="user_input" />
+                        <span class="dot"></span>
+                    </div>
+                    
+                    <button type="submit" class="form_submit_btn">Submit</button>
+            </div>
+        </div>
+
+        <!----desktop---->
+
+        <div class="desktop_only" v-else>
+            <!--section_1-->
+            <div class="section" >
 
             <!--Heading-->
             <div class="form_heading">
@@ -80,15 +376,15 @@
                     <input type="Text" id="ProjecteDataCMID" required class="user_input" />
                     <span class="dot"></span>
                 </div>
-        </div>
+            </div>
 
-    <!--right btn-->
-        <button class="form_next_btn" v-if="showButton === 1" @click="toggleShowElement">                    
+            <!--right btn-->
+            <button class="form_next_btn">                    
             Next
-        </button>
-    
-    <!--section_2-->
-        <div class="section" v-if="showElement === 2">
+            </button>
+
+            <!--section_2-->
+            <div class="section">
 
             <!--Heading-->
             <div class="form_heading">
@@ -194,16 +490,16 @@
                     <input type="Text" id="keyContacts" required class="user_input" />
                     <span class="dot"></span>
                 </div>
-        </div>
+            </div>
 
-    <!--right btn-->
-        <button class="form_next_btn" v-if="showButton === 2" @click="toggleShowElement">                    
+            <!--right btn-->
+            <button class="form_next_btn">                    
             Next
-        </button>
+            </button>
 
-    <!--section_3-->
-        <div class="section" v-if="showElement === 3">
-        
+            <!--section_3-->
+            <div class="section">
+
             <!--Heading-->
             <div class="form_heading">
                 Section 3
@@ -288,8 +584,8 @@
                 </div>
                 
                 <button type="submit" class="form_submit_btn">Submit</button>
-        </div>
-        
+            </div>
+        </div>  
     </div>
 </template>
 
@@ -305,7 +601,7 @@
                 selected: 'Select client', //heading for dropdown
                 showOptions: false,
                 showElement: 1,
-                showButton: 2
+                showButton: 2,
                 
             }
         },
@@ -323,11 +619,13 @@
                     this.showButton = 0;
                 }
             }
+        },
+        computed: {
+            isMobileView() {
+            return window.innerWidth <= 800;
+            }
         }
-       // computed: {
-            
-        //} 
-    }  
+    } 
 </script>
 
 
@@ -353,18 +651,24 @@
         border-radius: 25px;
         padding: 25px 30px;
     }
+
+    //hidden elements
+    .desktop_only {
+        display: none;
+    }
+
     //FORM SECTION
     .section {
         max-width: 330px;
         width: 100%;
-        display: flex;
+        display:flex;
         flex-flow: column nowrap;
-        justify-content: space-between;
     }
 
     //BUTTON STYLE
     .form_submit_btn,
     .form_next_btn {
+        
         align-self: flex-end;
         width:100px;
         padding: 8px 12px;
@@ -383,6 +687,7 @@
         color: black;
         font-size: 1.5rem;
         font-weight: 700;
+        margin-bottom: 15px;
     }
 
     .form_subheading {
@@ -441,7 +746,7 @@
 
     //RADIO STYLES
     .radio{
-        padding-top: 5px;
+        padding-top: 10px;
         padding-bottom: 5px;
     }
 
@@ -455,7 +760,7 @@
             border: 1px solid black;
             border-radius: 5px;
             margin-bottom: 15px;
-            
+            margin-top: 10px;
         .selected-value {
             display: flex;
             justify-content: space-between;
@@ -494,21 +799,33 @@
         }
     } 
     
-    @media only screen and (min-width: 980px) {
+    // MQ
+
+    @media only screen and (min-width: 800px) {
         .form_wrapper {
-            display: flex;
-            flex-flow: row nowrap;
             max-width:1300px;
             width:100%;
-            justify-content: space-between;
             background-color: #8f8f8f29;
             padding: 20px;
             border-radius: 25px;
+
+            .desktop_only {
+                display: flex;
+                justify-content: space-around;
+                .form_next_btn {
+                    display: none;
+                }
+                .form_submit_btn {
+                    align-self: flex-end;
+                    margin-right: 29px;
+                }
+
+    
+            }
         }
-        .section {
-            display:block;
-            width: 330px;
-        }
-        
+     
     }
+
+    
+
 </style>
