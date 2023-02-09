@@ -1,4 +1,5 @@
 <template>
+
     <div class="form_wrapper"  >
         <!--section_1-->
             <div class="section" v-show="isVisible(0)" >
@@ -12,7 +13,14 @@
                 <div class="required">
                     <div class="user_select">
                         <div class="selected-value" @click="showOptions = !showOptions">
-                            {{ selected }}         <span class="down-arrow">▼</span>
+                            {{ selected }}         
+                            <span class="down-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="7" viewBox="0 0 13 7">
+                                    <path id="Polygon_1" 
+                                        data-name="Polygon 1" 
+                                        d="M5.767.789a1,1,0,0,1,1.466,0L11.44,5.32A1,1,0,0,1,10.707,7H2.293A1,1,0,0,1,1.56,5.32Z" transform="translate(13 7) rotate(180)"/>
+                                </svg>
+                            </span>
                         </div>
                         <div class="options" v-show="showOptions">
                             <div class="option" v-for="(option, index) in options" :key="index" 
@@ -89,6 +97,18 @@
                         Next
                     </button>
             </div>
+            <div class="next_section_btn">
+                <svg id="Group_1095" data-name="Group 1095" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
+                    <defs>
+                        <clipPath id="clip-path">
+                        <rect id="Rectangle_635" data-name="Rectangle 635" width="28" height="28" fill="#5a5a5a"/>
+                        </clipPath>
+                    </defs>
+                    <g id="Group_1094" data-name="Group 1094" clip-path="url(#clip-path)">
+                        <path id="Path_1983" data-name="Path 1983" d="M14,0A14,14,0,1,0,28,14,14,14,0,0,0,14,0m5.04,15.01L12.8,21.25a1.35,1.35,0,0,1-.94.39,1.315,1.315,0,0,1-.93-2.25L16.32,14,10.93,8.61a1.315,1.315,0,0,1,.93-2.25,1.292,1.292,0,0,1,.94.39l6.24,6.24a1.424,1.424,0,0,1,0,2.02" fill="#5a5a5a"/>
+                    </g>
+                </svg>
+            </div>
 
         <!--section_2-->
             <div class="section" v-show="isVisible(1)" >
@@ -108,39 +128,39 @@
                     <!--radio group 1-->
                     <div class="radio_wrapper">
                         <div class="required">
-                            <div class="user_label">Database Platform</div>
+                            <div class="user_label_radio" name="databasePlatform" >Database Platform</div>
                             <span class="dot"></span>
                         </div>
                         <div class="radio">
-                            <input type="radio" required id="relativity" value="Relativity" class="radio_input"/>
+                            <input type="radio" name="databasePlatform" required id="relativity" value="Relativity" class="radio_input"/>
                             <label for="Relativity" class="radio_label">Relativity</label>
                         </div>
                         <div class="radio">
-                            <input type="radio" required id="Disco" value="Disco" class="radio_input"/>
+                            <input type="radio" name="databasePlatform" required id="Disco" value="Disco" class="radio_input"/>
                             <label for="Disco" class="radio_label">Disco</label>
                         </div>
                         <div class="radio">
-                            <input type="radio" required id="Accelerate" value="Accelerate" class="radio_input"/>
+                            <input type="radio" name="databasePlatform" required id="Accelerate" value="Accelerate" class="radio_input"/>
                             <label for="Accelerate" class="radio_label">Accelerate</label>
                         </div>
                         <div class="radio">
-                            <input type="radio" required id="Other" value="Other" class="radio_input"/>
+                            <input type="radio" name="databasePlatform" required id="Other" value="Other" class="radio_input"/>
                             <label for="Other" class="radio_label">Other</label>
                         </div>
                     </div>
 
                     <!--radio group 2-->
-                    <div class="radio_wrapper">
+                    <div class="radio_wrapper" name="scope">
                         <div class="required">
-                            <div class="user_label">Scope</div>
+                            <div class="user_label_radio">Scope</div>
                             <span class="dot"></span>
                         </div>
                         <div class="radio">
-                            <input type="radio" required id="Standardreview" value="Standardreview" class="radio_input"/>
+                            <input type="radio"  name="scope" required id="Standardreview" value="Standardreview" class="radio_input"/>
                             <label for="Standardreview" class="radio_label">Standard review</label>
                         </div>
                         <div class="radio">
-                            <input type="radio" required id="Other" value="Other" class="radio_input"/>
+                            <input type="radio"  name="scope" required id="Other" value="Other" class="radio_input"/>
                             <label for="Other" class="radio_label">Other</label>
                         </div>
                     </div>
@@ -148,15 +168,15 @@
                     <!--radio group 3-->
                     <div class="radio_wrapper">
                         <div class="required">
-                            <div class="user_label">Has foreign language?</div>
+                            <div class="user_label_radio" name="foreignLang">Has foreign language?</div>
                             <span class="dot"></span>
                         </div>
                         <div class="radio">
-                            <input type="radio" required id="No" value="No" class="radio_input"/>
+                            <input type="radio" required id="No" value="No" class="radio_input" name="foreignLang"/>
                             <label for="No" class="radio_label">No</label>
                         </div>
                         <div class="radio">
-                            <input type="radio" required id="Yes" value="Yes" class="radio_input"/>
+                            <input type="radio" required id="Yes" value="Yes" class="radio_input" name="foreignLang"/>
                             <label for="Yes" class="radio_label">Yes</label>
                         </div>
                     </div>
@@ -215,6 +235,18 @@
                     </button>
             </div>
 
+            <div class="next_section_btn">
+                <svg id="Group_1095" data-name="Group 1095" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
+                    <defs>
+                        <clipPath id="clip-path">
+                        <rect id="Rectangle_635" data-name="Rectangle 635" width="28" height="28" fill="#5a5a5a"/>
+                        </clipPath>
+                    </defs>
+                    <g id="Group_1094" data-name="Group 1094" clip-path="url(#clip-path)">
+                        <path id="Path_1983" data-name="Path 1983" d="M14,0A14,14,0,1,0,28,14,14,14,0,0,0,14,0m5.04,15.01L12.8,21.25a1.35,1.35,0,0,1-.94.39,1.315,1.315,0,0,1-.93-2.25L16.32,14,10.93,8.61a1.315,1.315,0,0,1,.93-2.25,1.292,1.292,0,0,1,.94.39l6.24,6.24a1.424,1.424,0,0,1,0,2.02" fill="#5a5a5a"/>
+                    </g>
+                </svg>
+            </div>
         <!--section_3-->
             <div class="section" v-show="isVisible(2)" >
             
@@ -304,6 +336,7 @@
                     <button type="submit" class="form_submit_btn">Submit</button>
             </div>
     </div>
+
 </template>
 
 <script>
@@ -354,16 +387,22 @@
         position: relative;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
         flex-flow: column  nowrap;
 
+        .next_section_btn {
+            display: none;
+        }
+
         .section {
-            max-width: 400px;
+            max-width: 430px;
             width: 100%;
             display:flex;
             flex-flow: column nowrap;
+
             background-color: #80808019;
-            padding: 35px;
+            padding: 25px;
+            padding-right: 15px;
             border-radius: 25px;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
@@ -381,7 +420,9 @@
                 border-radius:  5px;
                 font-size: 1rem;
                 box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-                margin-top: 25px;
+                margin-top: 70px;
+                margin-right: 20px;
+                margin-bottom: 20px;
                 
                 &:hover {
                     background-color: #000000;
@@ -391,10 +432,12 @@
             .form_add_btn {
                 cursor: pointer;
                 border: none;
-                margin-left:2px;
+                padding-right: 10px;
+                justify-self: flex-end;
                 margin-bottom: 5px;
                 background-color: transparent;
-
+                position: relative;
+    
                 svg:hover circle {
                     fill: black;
                 }
@@ -412,7 +455,7 @@
                 color: black;
                 font-size: 1.188rem;
                 font-weight: 700;
-                margin-bottom: 20px;
+                margin-bottom: 15px;
                 
                
             }
@@ -431,10 +474,12 @@
 
             //INPUT STYLES
             .required {
-                max-width: 330px;
+                max-width: 400px;
                 width:100%;
                 display: flex;
+                flex-shrink: 0;
                 flex-wrap: nowrap;
+                
 
                 //INPUT STYLES
                 .user_input {
@@ -448,15 +493,20 @@
                     font-size: 1rem;
                     font-weight: 300;
                     padding-left: 10px; 
+                    
                 }
 
                 //REQUIRED FIELD DOTS
                 .dot {
+                    z-index: 1000;
                     height: 6px;
                     width: 6px;
+                    padding-left:2px;
+                    padding-right:3px;
                     background-color: red;
                     border-radius: 100%;
                     margin-left: 2px;
+                    margin-right: 10px;
                 }
             }  
 
@@ -464,6 +514,13 @@
             .radio{
                 padding-top: 10px;
                 padding-bottom: 5px;
+            }
+
+            .user_label_radio {
+                //padding-bottom: 1px;
+                padding-top: 4px;
+                font-weight: 700;
+                font-size: 1rem;
             }
 
             //SELECT DROPDOWN STYLES
@@ -527,8 +584,8 @@
                 background-color: #80808019;
                 border-radius: 25px;
                 box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-                max-width: 1200px;
-                width: 100%;
+                //max-width: 1400px;
+                //width: 100%;
                 
                 .section {
                     width: calc(100% / 3);
@@ -540,7 +597,15 @@
                 .form_next_btn {
                     display: none;
                 }
-        }
+
+                .next_section_btn {
+                    display: block;
+                    align-self: center;
+                    justify-self: center;
+                    margin-right: 10px;
+                    margin-left: 10px;
+                }
+            }
         }
     
 </style>
