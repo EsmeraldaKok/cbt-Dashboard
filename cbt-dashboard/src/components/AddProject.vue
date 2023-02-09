@@ -119,7 +119,7 @@
                 </div>
 
                 <!--heading two-->
-                <div class="form_subheading">
+                <div class="form_subheading section_2_sub">
                     Project data
                 </div>
 
@@ -129,7 +129,7 @@
                     <div class="radio_wrapper">
                         <div class="required">
                             <div class="user_label_radio" name="databasePlatform" >Database Platform</div>
-                            <span class="dot"></span>
+                            <span class="dot radio_dot"></span>
                         </div>
                         <div class="radio">
                             <input type="radio" name="databasePlatform" required id="relativity" value="Relativity" class="radio_input"/>
@@ -153,7 +153,7 @@
                     <div class="radio_wrapper" name="scope">
                         <div class="required">
                             <div class="user_label_radio">Scope</div>
-                            <span class="dot"></span>
+                            <span class="dot radio_dot"></span>
                         </div>
                         <div class="radio">
                             <input type="radio"  name="scope" required id="Standardreview" value="Standardreview" class="radio_input"/>
@@ -169,7 +169,7 @@
                     <div class="radio_wrapper">
                         <div class="required">
                             <div class="user_label_radio" name="foreignLang">Has foreign language?</div>
-                            <span class="dot"></span>
+                            <span class="dot radio_dot"></span>
                         </div>
                         <div class="radio">
                             <input type="radio" required id="No" value="No" class="radio_input" name="foreignLang"/>
@@ -183,7 +183,7 @@
 
                 <!-----INPUTS----->
                     <!--input label-->
-                    <label for="startDate" class="user_label heading">
+                    <label for="startDate" class="user_label heading radio_space">
                         Start date
                     </label>
                     <div class="required">
@@ -456,8 +456,10 @@
                 font-size: 1.188rem;
                 font-weight: 700;
                 margin-bottom: 15px;
-                
-               
+            }
+
+            .section_2_sub {
+                margin-bottom: 0px;
             }
 
             .user_label {
@@ -469,10 +471,15 @@
                 font-size: 1rem;
                 color: black;
                 font-weight: 300;
-                padding-left: 5px;    
+                padding-left: 5px;  
+                
             }   
 
             //INPUT STYLES
+
+            .radio_space{
+                margin-top: 15px;
+            }
             .required {
                 max-width: 400px;
                 width:100%;
@@ -508,6 +515,10 @@
                     margin-left: 2px;
                     margin-right: 10px;
                 }
+
+                .radio_dot {
+                    margin-top: 12px;
+                }
             }  
 
             //RADIO STYLES
@@ -517,7 +528,7 @@
             }
 
             .user_label_radio {
-                //padding-bottom: 1px;
+                margin-top: 10px;
                 padding-top: 4px;
                 font-weight: 700;
                 font-size: 1rem;
