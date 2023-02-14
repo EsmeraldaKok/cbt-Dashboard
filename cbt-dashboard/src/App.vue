@@ -2,8 +2,9 @@
   <div id="app">
     <!--<UserInfo />
     <UserTable />
-    <AddUser />-->
-    <AddProject />
+    <AddUser />
+    <AddProject />-->
+    <AddIndustry />
     
   </div>
 </template>
@@ -12,11 +13,12 @@
 
 //import UserInfo from './components/UserInfo.vue';
 //import UserTable from './components/UserTable.vue';import AddUser from './components/AddUser.vue';
-import AddProject from './components/AddProject.vue';
+//import AddProject from './components/AddProject.vue';
 //import AddUser from './components/AddUser.vue';
+import AddIndustry from './components/AddIndustry.vue';
 export default {
     name: "App",
-    components: { AddProject }
+    components: { AddIndustry }
 }
 </script>
 <style>
